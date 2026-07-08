@@ -1,4 +1,5 @@
 import React from 'react';
+import FadingVideo from './FadingVideo';
 
 interface ShowreelPageProps {
   onBack: () => void;
@@ -8,13 +9,10 @@ const ShowreelPage: React.FC<ShowreelPageProps> = ({ onBack }) => {
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-black">
       {/* Background Video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover z-0 opacity-70"
-        autoPlay
-        loop
-        muted
-        playsInline
+      <FadingVideo
         src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260411_104032_69319010-2458-492b-b04d-b40a5dfa4482.mp4"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        style={{ opacity: 0.7 }}
       />
 
       {/* Content Overlay */}
